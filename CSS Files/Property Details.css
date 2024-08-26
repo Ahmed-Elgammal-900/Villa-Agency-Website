@@ -1,0 +1,481 @@
+/* Start selection color */
+
+*::selection{
+    background: #0071f8;
+    color: white;
+}
+
+/* End selection color */
+
+/* Start Laoding Page */
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    z-index: 9999;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.loading .spinner-border{
+    width: 70px;
+    height: 70px;
+}
+/* End Loading Page */
+
+
+/* Start Header */
+header .container .top{
+padding: 10px;
+}
+
+header .container .top .social-icons a{
+    background-color: #cdcdcd;
+    border: none;
+}
+
+header .container .top .social-icons a:hover{
+    background-color: #f35525;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+
+}
+
+nav .brand a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+}
+
+nav .links ul{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin-bottom: 0;
+}
+
+nav .links ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links ul li a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+}
+
+nav .links ul li a:hover{
+    color: #f35525;
+}
+
+nav .links ul li a.active{
+    color: #f35525;
+}
+
+nav .links ul li button{
+    color: white;
+}
+
+nav .links ul li button:hover{
+    color: #f35525;
+}
+
+nav .links ul li button:hover i{
+    color: white;
+}
+
+nav .button{
+    font-size: 35px;
+    display: none;
+    width: fit-content;
+    position: relative;
+    height: 30px;
+    width: 40px;
+}
+
+nav .button .line1{
+    position: absolute;
+    top: 8%;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+} 
+
+nav .button .line3{
+    position: absolute;
+    top: 90%;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+nav .button.active .line1{
+    top: 50%;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+} 
+
+nav .button.active .line3{
+ top: 50%;
+ transform: rotate(-45deg);
+ -webkit-transform: rotate(-45deg);
+ -moz-transform: rotate(-45deg);
+ -ms-transform: rotate(-45deg);
+ -o-transform: rotate(-45deg);
+}
+
+nav .button .line2{
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 15px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+nav .button.active .line2{
+    opacity: 0;
+}
+
+@media (max-width: 992px){
+    nav .button{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav .links ul{
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 135%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        flex-direction: column;
+        animation-name: appear;
+        animation-duration: 0.5s;
+        animation-play-state: paused;
+        padding-left: 0;
+        z-index: 2000;
+        background-color: white;
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+    }
+
+    nav .links ul.active{
+        display: flex;
+        animation-play-state: running;
+    }
+
+    header{
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px){
+    nav{
+        padding: 0 20px;
+    }
+}
+
+@keyframes appear {
+    0%{
+        top: 0;
+        opacity: 0;
+    }
+
+    100%{
+        top: 135%;
+        opacity: 1;
+    }
+}
+/* End Header */
+
+/* Start single property */
+.single-property-header{
+    background: url(../images/page-heading-bg.jpg);
+    padding: 100px 0;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.single-property-header span{
+    text-transform: uppercase;
+    background-color: white;
+    padding: 10px 25px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.single-property-header span a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.single-property-header span a:hover{
+    color: #f35525;
+}
+
+.single-property-header h2{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 45px;
+    color: white;
+}
+
+.single-property-content{
+    padding: 100px;
+}
+
+.single-property-content .col-lg-8 img{
+    width: 100%;
+}
+
+.single-property-content .col-lg-8 .accordion .accordion-item .accordion-header button{
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.single-property-content .col-lg-4 .rounded{
+    margin-left: 60px;
+}
+
+.single-property-content .col-lg-4 h4{
+    font-weight: 650 !important;
+    margin-bottom: 5px;
+}
+
+.single-property-content .col-lg-4 span{
+    color: #aaa;
+    font-weight: 400;
+}
+
+@media(max-width: 1024px) and (min-width: 992px){
+    .single-property-content{
+        padding: 60px;
+    }
+    .single-property-content .col-lg-4 .rounded{
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 992px){
+    .single-property-content{
+        padding: 70px 25px;
+    }
+    .single-property-content .row{
+        gap: 50px;
+    }
+
+    .single-property-content .col-lg-4 .rounded{
+        margin-left: 0;
+    }
+
+    .single-property-header span{
+        font-size: 13px;
+    }
+
+    
+    .single-property-header h2{
+        font-size: 40px;
+    }
+}
+
+@media (width <= 576px){
+    .single-property-header{
+        padding: 50px 20px;
+    }
+    .single-property-header h2{
+        font-size: 30px;
+    } 
+
+    .single-property-header span{
+        font-size: 12px;
+    }
+}
+/* End single property */
+
+/* Start Deals */
+.deals .container .row .col-lg-6 ul .nav-link{
+    background-color: black !important;
+    color: white;
+    height: 50px;
+    width: 140px;
+}
+
+.deals .container .row .col-lg-6 ul .nav-link.active{
+    background-color: #f35525 !important;
+}
+
+.deals{
+    padding: 100px 50px;
+}
+
+.deals .tab-content .tab-pane .row .list{
+    background-color: transparent;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.150);
+    padding: 30px;
+}
+
+.deals .tab-content .tab-pane .row .list hr{
+    margin: 22px 0;
+    border-color: #cdcdcd;
+}
+
+.deals .tab-content .tab-pane .row .text-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deals .tab-content .tab-pane .row .text-content h4{
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.deals .tab-content .tab-pane .row .text-content span{
+    color: #aaa;
+}
+
+.deals .tab-content .tab-pane .row button:hover{
+    color: #f35525 !important;
+}
+
+.deals .tab-content .tab-pane .row button:hover i{
+    color: white !important;
+}
+
+.deals .tab-content .tab-pane .row .col-lg-3 h5{
+    font-weight: 700;
+    font-size: 18px !important;
+}
+
+.deals .tab-content .tab-pane .row .col-lg-3 p:first-of-type{
+    margin-top: 20px;
+}
+
+.deals .tab-content .tab-pane .row .col-lg-3 p:nth-child(3){
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 1200px) and (min-width: 992px){
+    .deals{
+        padding: 40px;
+    }
+    .deals img{
+        height: 80%;
+    }
+
+    .deals .tab-content .tab-pane .row .text-content span{
+        font-size: 13px;
+    }
+
+    .deals .tab-content .tab-pane .row .text-content h4{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 992px){
+    .deals{
+        padding: 50px 30px;
+    }
+    .deals .tab-content .tab-pane .row{
+        gap: 50px;
+    }
+
+    .deals .container > .row{
+        gap: 30px;
+    }
+
+    .deals .container > .row .col-lg-6:nth-child(2){
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 576px){
+    .deals{
+        padding: 50px 20px;
+    }
+}
+/* End Deals */
+
+/* Start Footer */
+footer{
+    background-color: black;
+    padding: 50px 0;
+}
+
+footer p{
+    margin-bottom: 0;
+}
+/* End Footer */
